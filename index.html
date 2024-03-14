@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Hello from Electron renderer!</title>
+  </head>
+  <body>
+    <!-- <p>只有支持ddc/ci协议的显示器才能通过按钮控制亮度</p> -->
+    <p id="brightness-info"></p>
+    <p id="volume-info"></p>
+    <button id="increase-brightness">Increase Brightness</button>
+    <button id="decrease-brightness">Decrease Brightness</button>
+    <button id="increase-volume">Increase Volume</button>
+    <button id="decrease-volume">Decrease Volume</button>
+  </body>
+  <script src="./js/renderer.js"></script>
+</html>
