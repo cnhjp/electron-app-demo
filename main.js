@@ -6,7 +6,7 @@ updateElectronApp();
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    // start时的icon
+    // 运行时的图标
     icon: path.join(__dirname, "image", "icon.png"),
     width: 800,
     height: 600,

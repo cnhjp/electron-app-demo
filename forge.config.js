@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
   packagerConfig: {
+    // 桌面图标
     icon: path.join(__dirname, "image", "mario.ico"),
   },
   rebuildConfig: {},
