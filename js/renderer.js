@@ -1,6 +1,14 @@
 const brightness = window.versions.brightness;
 const loudness = window.versions.loudness;
+const packageVersion = window.versions.packageVersion;
 
+/// 版本号
+const versionInfo = document.getElementById("version-info");
+function showVersion() {
+  versionInfo.textContent = `版本号: ${packageVersion}`;
+}
+
+/// 亮度控制
 const increaseBrightnessButton = document.getElementById("increase-brightness");
 const decreaseBrightnessButton = document.getElementById("decrease-brightness");
 const brightnessInfo = document.getElementById("brightness-info");
@@ -19,6 +27,7 @@ decreaseBrightnessButton.addEventListener("click", async () => {
   brightnessInfo.textContent = `亮度已降低到 ${newLevel * 100}%`;
 });
 
+/// 音量控制
 const increaseVolumeButton = document.getElementById("increase-volume");
 const decreaseVolumeButton = document.getElementById("decrease-volume");
 const volumeInfo = document.getElementById("volume-info");
@@ -39,6 +48,8 @@ decreaseVolumeButton.addEventListener("click", async () => {
 
 // 初始显示亮度和音量
 async function init() {
+  showVersion();
+
   const level = await brightness.get();
   brightnessInfo.textContent = `当前亮度: ${level * 100}%`;
 
