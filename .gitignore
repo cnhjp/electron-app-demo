@@ -91,3 +91,8 @@ out/
 
 # environment file
 .env.build
+
+# lock file
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
