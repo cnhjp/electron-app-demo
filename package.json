@@ -1,6 +1,6 @@
 {
   "name": "electron-app-demo",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "一个可以调节系统亮度/音量的electron应用",
   "main": "main.js",
   "scripts": {
