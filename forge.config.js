@@ -1,17 +1,15 @@
 const path = require("path");
 
 module.exports = {
-  packagerConfig: {
-    // 桌面图标
-    icon: path.join(__dirname, "image", "mario.ico"),
-  },
   rebuildConfig: {},
   makers: [
     {
       name: "@electron-forge/maker-squirrel",
       config: {
-        // certificateFile: "./cert.pfx",
-        // certificatePassword: process.env.CERTIFICATE_PASSWORD,
+        // 桌面图标
+        icon: path.join(__dirname, "image", "duck.ico"),
+        // 窗口加载中的图标
+        setupIcon: path.join(__dirname, "image", "mario.ico"),
       },
     },
     {
