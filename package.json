@@ -9,6 +9,10 @@
     "make": "dotenv -e .env.build -- electron-forge make",
     "publish": "dotenv -e .env.build -- electron-forge publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cnhjp/electron-app-demo.git"
+  },
   "keywords": [],
   "author": "hjp",
   "license": "ISC",
