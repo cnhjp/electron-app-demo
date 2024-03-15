@@ -88,3 +88,6 @@ dist/
 
 # Electron output
 out/
+
+# environment file
+.env.build

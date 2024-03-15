@@ -22,4 +22,17 @@ module.exports = {
       config: {},
     },
   ],
+  publishers: [
+    {
+      name: "@electron-forge/publisher-github",
+      config: {
+        repository: {
+          owner: "cnhjp",
+          name: "electron-app-demo",
+        },
+        prerelease: false,
+        draft: true,
+      },
+    },
+  ],
 };

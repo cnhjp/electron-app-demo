@@ -4,11 +4,10 @@
   "description": "一个可以调节系统亮度/音量的electron应用",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish"
+    "start": "dotenv -e .env.dev -- electron-forge start",
+    "package": "dotenv -e .env.build -- electron-forge package",
+    "make": "dotenv -e .env.build -- electron-forge make",
+    "publish": "dotenv -e .env.build -- electron-forge publish"
   },
   "keywords": [],
   "author": "hjp",
@@ -23,7 +22,9 @@
   },
   "dependencies": {
     "brightness": "^3.0.0",
+    "dotenv-cli": "^7.3.0",
     "electron-squirrel-startup": "^1.0.0",
-    "loudness": "^0.4.2"
+    "loudness": "^0.4.2",
+    "update-electron-app": "^3.0.0"
   }
 }

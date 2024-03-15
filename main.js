@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron/main");
 const path = require("node:path");
+// require("update-electron-app")();
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -12,7 +13,10 @@ const createWindow = () => {
   });
   win.loadFile("index.html");
 
-  win.webContents.openDevTools();
+  console.log(process.env.DEV_TOOLS, "-------------------");
+  if (process.env.DEV_TOOLS === "true") {
+    win.webContents.openDevTools();
+  }
 };
 
 app.whenReady().then(() => {
