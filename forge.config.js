@@ -10,6 +10,9 @@ module.exports = {
         icon: path.join(__dirname, "image", "duck.ico"),
         // 窗口加载中的图标
         setupIcon: path.join(__dirname, "image", "mario.ico"),
+        // 签名
+        certificateFile: "./root.pfx",
+        certificatePassword: process.env.CERTIFICATE_PASSWORD,
       },
     },
     {
