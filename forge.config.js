@@ -1,5 +1,9 @@
+const path = require("path");
+
 module.exports = {
-  packagerConfig: {},
+  packagerConfig: {
+    icon: path.join(__dirname, "image", "mario.ico"),
+  },
   rebuildConfig: {},
   makers: [
     {
