@@ -13,7 +13,6 @@ const createWindow = () => {
   });
   win.loadFile("index.html");
 
-  console.log(process.env.DEV_TOOLS, "-------------------");
   if (process.env.DEV_TOOLS === "true") {
     win.webContents.openDevTools();
   }
